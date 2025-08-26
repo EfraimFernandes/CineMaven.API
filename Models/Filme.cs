@@ -1,14 +1,20 @@
-﻿namespace CineMaven.API.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace CineMaven.API.Models
 {
     public class Filme
     {
-        public string titulo { get; set; } = string.Empty;
-        public string sinopse { get; set; } = string.Empty;
-        public int idCategoria { get; set; } = 0;
-        public int anoLancamento { get; set; } = 0;
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int IdFilme { get; set; } = 0;
+        public string Titulo { get; set; } = string.Empty;
+        public string Sinopse { get; set; } = string.Empty;
+        public int IdCategoria { get; set; } = 0;
+        public int AnoLancamento { get; set; } = 0;
         public string CapaUrl { get; set; } = string.Empty;
-        public DateTime? dataAlta { get; set; };
-        public string usuarioAlta {  get; set; } = string.Empty;
+        public DateTime? DataAlta { get; set; }
+        public string UsuarioAlta {  get; set; } = string.Empty;
 
     }
 }
