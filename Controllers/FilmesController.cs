@@ -118,8 +118,6 @@ namespace CineMaven.API.Controllers
             return filePath; // ou $"/capas/{fileName}" se configurar static files
         }
 
-        // ... outros métodos
-
         private bool FilmeExists(int id)
         {
             return _context.Filmes.Any(e => e.IdFilme == id);

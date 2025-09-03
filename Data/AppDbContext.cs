@@ -11,5 +11,6 @@ namespace CineMaven.API.Data
 
         public DbSet<Filme> Filmes { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
     }
 }
